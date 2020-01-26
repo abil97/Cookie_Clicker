@@ -1,5 +1,6 @@
 package com.example.cookie_clicker;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
@@ -74,13 +75,14 @@ public class MainActivity extends AppCompatActivity {
 
         btnTwo.setOnClickListener(new View.OnClickListener() {
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
                 System.out.println("Button was clicked!");
                 if(cookieCounter >= 100) {
                     multiply = 4;
                     cookieCounter -= 100;
-                    text.setText(String.valueOf(cookieCounter) + " cookies");
+                    text.setText(cookieCounter + " cookies");
                 }
             }
         });
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 if(cookieCounter >= 200) {
                     multiply = 8;
                     cookieCounter -= 200;
-                    text.setText(String.valueOf(cookieCounter) + " cookies");
+                    text.setText(cookieCounter + " cookies");
                 }
             }
         });
@@ -108,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 btnOne.getBackground().clearColorFilter();
                 btnTwo.getBackground().clearColorFilter();
                 btnThree.getBackground().clearColorFilter();
-                text.setText(String.valueOf(cookieCounter) + " cookies");
+                text.setText(cookieCounter + " cookies");
             }
         });
 
