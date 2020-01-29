@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     public int cookieCounter = 0, multiply = 1;
     Button ResetButton;
     Button btnOne, btnTwo, btnThree;
+    Boolean flag1 = true;
+    Boolean flag2 = true;
+    Boolean flag3 = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +40,32 @@ public class MainActivity extends AppCompatActivity {
         cookieButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
                 cookieCounter += multiply;
                 text.setText(String.valueOf(cookieCounter) + " cookies");
                 //System.out.println("Cookie was clicked\n");
 
-                if(cookieCounter >= 50) {
+                if(cookieCounter >= 50 && flag1) {
                     btnOne.setEnabled(true);
                     //btnOne.setBackgroundColor(Color.rgb(204,153,255));
                     btnOne.getBackground().setColorFilter(0xFFCC99FF, PorterDuff.Mode.MULTIPLY);
                 }
-                if(cookieCounter >= 100) {
+                if(cookieCounter >= 100 && flag2) {
                     btnTwo.setEnabled(true);
                     //btnTwo.setBackgroundColor(Color.rgb(204,153,255));
                     btnTwo.getBackground().setColorFilter(0xFFCC99FF, PorterDuff.Mode.MULTIPLY);
                 }
-                if(cookieCounter >= 200) {
+                if(cookieCounter >= 200 && flag3) {
                     btnThree.setEnabled(true);
                     btnThree.getBackground().setColorFilter(0xFFCC99FF, PorterDuff.Mode.MULTIPLY);
+                }
+
+                if(cookieCounter == 1000){
+                    cookieButton.setImageResource(android.R.color.transparent);
+                    cookieButton.setImageResource(R.drawable.congrats);
                 }
 
             }
@@ -68,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                     multiply = 2;
                     cookieCounter -= 50;
                     text.setText(String.valueOf(cookieCounter) + " cookies");
+                    btnOne.setEnabled(false);
+                    flag1 = false;
                 }
             }
         });
@@ -83,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     multiply = 4;
                     cookieCounter -= 100;
                     text.setText(cookieCounter + " cookies");
+                    btnTwo.setEnabled(false);
+                    flag2 = false;
+                    flag1 = false;
+
+                    btnOne.setEnabled(false);
                 }
             }
         });
@@ -95,6 +114,14 @@ public class MainActivity extends AppCompatActivity {
                     multiply = 8;
                     cookieCounter -= 200;
                     text.setText(cookieCounter + " cookies");
+                    btnThree.setEnabled(false);
+                    flag3 = false;
+                    flag2 = false;
+                    flag1 = false;
+
+                    btnTwo.setEnabled(false);
+                    btnOne.setEnabled(false);
+
                 }
             }
         });
@@ -111,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
                 btnTwo.getBackground().clearColorFilter();
                 btnThree.getBackground().clearColorFilter();
                 text.setText(cookieCounter + " cookies");
+
+                cookieButton.setImageResource(android.R.color.transparent);
+                cookieButton.setImageResource(R.drawable.cookie);
+                flag1 = true;
+                flag2 = true;
+                flag3 = true;
             }
         });
 
