@@ -3,6 +3,7 @@ package com.example.cookie_clicker;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Boolean flag1 = true;
     Boolean flag2 = true;
     Boolean flag3 = true;
+    TextView descText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         btnTwo = findViewById(R.id.btnTwo);
         btnThree = findViewById(R.id.btnThree);
         ResetButton = findViewById(R.id.Reset);
+        descText = findViewById(R.id.textView2);
 
 
 
@@ -63,9 +66,15 @@ public class MainActivity extends AppCompatActivity {
                     btnThree.getBackground().setColorFilter(0xFFCC99FF, PorterDuff.Mode.MULTIPLY);
                 }
 
-                if(cookieCounter == 1000){
+                if(cookieCounter >= 500){
+                    descText.setText(getResources().getString(R.string.half));
+                }
+
+                if(cookieCounter >= 1000){
                     cookieButton.setImageResource(android.R.color.transparent);
                     cookieButton.setImageResource(R.drawable.congrats);
+                    descText.setText(getResources().getString(R.string.win));
+                    cookieButton.setEnabled(false);
                 }
 
             }
@@ -141,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
 
                 cookieButton.setImageResource(android.R.color.transparent);
                 cookieButton.setImageResource(R.drawable.cookie);
+                cookieButton.setEnabled(true);
+                descText.setText(getResources().getString(R.string.desc));
                 flag1 = true;
                 flag2 = true;
                 flag3 = true;

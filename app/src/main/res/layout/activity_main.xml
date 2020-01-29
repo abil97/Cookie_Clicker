@@ -42,57 +42,42 @@
     <Button
         android:id="@+id/btnOne"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="70dp"
-
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="296dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
         android:text="x2"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnTwo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cookieButton"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/cookieButton" />
 
     <Button
         android:id="@+id/btnTwo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-
-        android:layout_marginBottom="296dp"
-
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
         android:text="x4"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnThree"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnOne"
-        app:layout_constraintTop_toBottomOf="@+id/cookieButton"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/cookieButton" />
 
 
     <Button
         android:id="@+id/btnThree"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-
-        android:layout_marginTop="70dp"
-
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="296dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
         android:text="x8"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnTwo"
-        app:layout_constraintTop_toBottomOf="@+id/cookieButton"></Button>
+        app:layout_constraintTop_toBottomOf="@+id/cookieButton" />
 
 
     <Button
@@ -115,7 +100,7 @@
         android:text="200 Cookies"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/btnThree"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="@+id/btnThree"
         app:layout_constraintTop_toBottomOf="@+id/btnThree" />
 
@@ -138,6 +123,7 @@
         android:text="50 Cookies"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/btnOne"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/btnOne"
         app:layout_constraintTop_toBottomOf="@+id/btnOne" />
 
@@ -145,19 +131,44 @@
         android:id="@+id/barrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top" />
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="731dp" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top" />
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="731dp" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top" />
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="731dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="52dp"
+        android:text="@string/desc"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="731dp" />
 
 
 </android.support.constraint.ConstraintLayout>
