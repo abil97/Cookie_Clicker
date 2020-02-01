@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">Cookie_Clicker</string>
-    <string name="desc"> Score 1000 cookies to Win! </string>
+    <string name="desc"> Score 1.000.000 cookies to Win! </string>
     <string name="half"> Half of the work is done! \n Keep Going!</string>
     <string name="win"> Congratulations! You\'ve won!</string>
+    <string name="_50_cookies">25 Cookies</string>
+    <string name="_0_cookies">0 Cookies</string>
+    <string name="x2">x2</string>
+    <string name="x4">x4</string>
+    <string name="x8">x8</string>
+    <string name="reset">Reset</string>
+    <string name="_200_cookies">75 Cookies</string>
+    <string name="_100_cookies">50 Cookies</string>
+    <string name="todo">TODO</string>
+    <string name="granny">Granny\n Bakes 2 cookies\nper second.\n 200 Cookies</string>
+    <string name="farm">Farm\n Grows 10 cookies\nper second.\n 500 Cookies</string>
+    <string name="factory">Factory\n Produces 50 cookies\nper second.\n 1000 Cookies</string>
+    <string name="_0_factories">0 Factories</string>
 </resources>

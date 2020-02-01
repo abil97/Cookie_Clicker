@@ -9,29 +9,29 @@
 
     <ImageButton
         android:id="@+id/cookieButton"
-        android:layout_width="236dp"
-        android:layout_height="236dp"
+        android:layout_width="174dp"
+        android:layout_height="160dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:background="@null"
+        android:contentDescription="@string/todo"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cookie" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="205dp"
+        android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="0 Cookies"
+        android:text="@string/_0_cookies"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cookieButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +42,12 @@
     <Button
         android:id="@+id/btnOne"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
-        android:text="x2"
+        android:text="@string/x2"
+        android:textSize="12dp"
         app:layout_constraintEnd_toStartOf="@+id/btnTwo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,11 +56,12 @@
     <Button
         android:id="@+id/btnTwo"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
-        android:text="x4"
+        android:text="@string/x4"
+        android:textSize="14dp"
         app:layout_constraintEnd_toStartOf="@+id/btnThree"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnOne"
@@ -69,11 +71,12 @@
     <Button
         android:id="@+id/btnThree"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:width="60dip"
         android:enabled="false"
-        android:text="x8"
+        android:text="@string/x8"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnTwo"
@@ -86,8 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#00001a"
-        android:text="Reset"
+        android:text="@string/reset"
         android:textColor="#FFFFFF"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -97,8 +101,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="200 Cookies"
+        android:text="@string/_200_cookies"
         android:textAlignment="center"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="@+id/btnThree"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="@+id/btnThree"
@@ -109,8 +114,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="100 Cookies"
+        android:text="@string/_100_cookies"
         android:textAlignment="center"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="@+id/btnTwo"
         app:layout_constraintStart_toStartOf="@+id/btnTwo"
         app:layout_constraintTop_toBottomOf="@+id/btnTwo" />
@@ -120,55 +126,137 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="50 Cookies"
+        android:text="@string/_50_cookies"
         android:textAlignment="center"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="@+id/btnOne"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/btnOne"
         app:layout_constraintTop_toBottomOf="@+id/btnOne" />
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        tools:layout_editor_absoluteY="731dp" />
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        tools:layout_editor_absoluteY="731dp" />
-
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        tools:layout_editor_absoluteY="731dp" />
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="52dp"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/desc"
         android:textAlignment="center"
+        android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Reset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier4"
+    <ImageButton
+        android:id="@+id/grannyButton"
+        android:layout_width="67dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/farmButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/granny" />
+
+    <ImageButton
+        android:id="@+id/farmButton"
+        android:layout_width="89dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/factoryButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/grannyButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/farm" />
+
+    <ImageButton
+        android:id="@+id/factoryButton"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/farmButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@drawable/factory_and_warehouse_sets_illustration_in_sketch_design_6825474" />
+
+    <TextView
+        android:id="@+id/grannyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:barrierDirection="top"
-        tools:layout_editor_absoluteY="731dp" />
+        android:text="@string/granny"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/farmText"
+        app:layout_constraintEnd_toEndOf="@+id/grannyButton"
+        app:layout_constraintStart_toStartOf="@+id/grannyButton" />
+
+    <TextView
+        android:id="@+id/farmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/farm"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/farmButton"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/farmButton"
+        app:layout_constraintTop_toBottomOf="@+id/farmButton" />
+
+    <TextView
+        android:id="@+id/factoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/factory"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/farmText"
+        app:layout_constraintEnd_toEndOf="@+id/factoryButton"
+        app:layout_constraintStart_toStartOf="@+id/factoryButton" />
+
+    <TextView
+        android:id="@+id/statsGrannies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="0 Grannies"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/statsFarms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="0 Farms"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/statsGrannies"
+        app:layout_constraintStart_toStartOf="@+id/statsGrannies"
+        app:layout_constraintTop_toBottomOf="@+id/statsGrannies" />
+
+    <TextView
+        android:id="@+id/statsFactories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:text="0 Factories"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/statsFarms"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/statsFarms"
+        app:layout_constraintTop_toBottomOf="@+id/statsFarms" />
 
 
 </android.support.constraint.ConstraintLayout>
