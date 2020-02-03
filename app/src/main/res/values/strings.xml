@@ -16,4 +16,5 @@
     <string name="farm">Farm\n Grows 10 cookies\nper second.\n 500 Cookies</string>
     <string name="factory">Factory\n Produces 50 cookies\nper second.\n 1000 Cookies</string>
     <string name="_0_factories">0 Factories</string>
+    <string name="authorship">by Abil Kuatbayev,\n Assiya Zhiyenbek</string>
 </resources>
